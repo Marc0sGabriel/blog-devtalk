@@ -5,6 +5,7 @@ export function Header() {
   return (
     <div className={styles.header}>
       <img src={blogLogo} alt="logo do blog" />
+      <strong>DevTalk</strong>
     </div>
   );
 }
