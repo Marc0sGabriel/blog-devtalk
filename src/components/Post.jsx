@@ -35,6 +35,7 @@ export function Post() {
           Para conseguir utilizar o template, seja através do React Native CLI
           ou com uma cópia local dos arquivos, siga o link abaixo.
         </p>
+        <a href="#">www.exemplo.com/projeto</a>
         <p>
           <a href="#">#nlw</a>
           <a href="#">#bootcamp</a>
@@ -42,8 +43,15 @@ export function Post() {
           <a href="#">#programação</a>
           <a href="#">#reactNative</a>
         </p>
-        <a href="#">www.exemplo.com/projeto</a>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Deixe seu feedback</strong>
+
+        <textarea placeholder="Deixe seu comentário" />
+
+        <button type="submit">Comentar</button>
+      </form>
     </article>
   );
 }
