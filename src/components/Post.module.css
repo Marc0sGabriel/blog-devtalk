@@ -132,3 +132,7 @@
   transition: all 0.3s;
   cursor: pointer;
 }
+
+.commentList {
+  margin-top: 2rem;
+}
