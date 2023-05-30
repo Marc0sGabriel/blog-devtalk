@@ -23,7 +23,7 @@ export function Comment() {
             </div>
 
             <button title="Deletar comentário">
-              <Trash size={20} weight="bold" />
+              <Trash size={24} weight="regular" />
             </button>
           </header>
 
