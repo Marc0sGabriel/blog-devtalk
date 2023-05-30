@@ -16,5 +16,6 @@
 
   .wrapper {
     grid-template-columns: 1fr;
+    padding: 0 0.7rem;
   }
 }
