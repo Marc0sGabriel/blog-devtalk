@@ -42,15 +42,14 @@ export function Post({ author, content, publishedAt }) {
                 <a href="#">{line.content}</a>
               </p>
             );
+          } else if (line.type === 'hashtag') {
+            return (
+              <span key={line.content} className={styles.hashtag}>
+                <a href="#">{line.content}</a>
+              </span>
+            );
           }
         })}
-        <p>
-          <a href="#">#nlw</a>
-          <a href="#">#bootcamp</a>
-          <a href="#">#rocketseat</a>
-          <a href="#">#programação</a>
-          <a href="#">#reactNative</a>
-        </p>
       </div>
 
       <form className={styles.commentForm}>

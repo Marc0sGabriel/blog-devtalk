@@ -38,6 +38,13 @@
   margin-left: 0.75rem;
 }
 
+.content span + span {
+  font-weight: bold;
+  color: var(--green-500);
+  text-decoration: none;
+  margin-left: 0.75rem;
+}
+
 .post > header {
   display: flex;
   align-items: center;
