@@ -1,42 +1,49 @@
+import { format, formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+
 import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import styles from './Post.module.css';
 
-export function Post() {
+export function Post({ author, content, publishedAt }) {
+  const publishedDateFormat = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
+    locale: ptBR,
+  });
+
+  const publishedDateToNow = formatDistanceToNow(publishedAt, {
+    locale: ptBR,
+    addSuffix: 'há',
+  });
+
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <Avatar
-            src="https://github.com/Marc0sGabriel.png"
-            alt="foto autor da postagem"
-          />
+          <Avatar src={author.avatarUrl} alt="foto autor da postagem" />
 
           <div className={styles.authorInfo}>
-            <strong>Marcos Gabriel</strong>
-            <span>Web Developer</span>
+            <strong>{author.name}</strong>
+            <span>{author.role}</span>
           </div>
         </div>
 
-        <time title="29 de maio às 16:04:00" dateTime="2023-05-29 16:04:00">
-          Publicado há 1h
+        <time title={publishedDateFormat} dateTime={publishedAt.toISOString()}>
+          {publishedDateToNow}
         </time>
       </header>
 
       <div className={styles.content}>
-        <p>
-          Este projeto visa a criação de um template que possa ser utilizado no
-          momento de criação de projetos utilizando React Native, visto que o
-          processo de instalação e configuração das libs no início de um projeto
-          podem gerar certa complexidade e muitas vezes até erros que atrasam o
-          processo, atrapalhando assim o fluxo de desenvolvimento.
-        </p>
-
-        <p>
-          Para conseguir utilizar o template, seja através do React Native CLI
-          ou com uma cópia local dos arquivos, siga o link abaixo.
-        </p>
-        <a href="#">www.exemplo.com/projeto</a>
+        {content.map((line) => {
+          if (line.type === 'paragraph') {
+            return <p key={line.content}>{line.content}</p>;
+          } else if (line.type === 'link') {
+            return (
+              <p key={line.content}>
+                <a href="#">{line.content}</a>
+              </p>
+            );
+          }
+        })}
         <p>
           <a href="#">#nlw</a>
           <a href="#">#bootcamp</a>
@@ -52,7 +59,7 @@ export function Post() {
         <textarea placeholder="Deixe seu comentário" />
 
         <footer>
-          <button type="submit">Comentar</button>
+          <button type="submit">Publicar</button>
         </footer>
       </form>
 
