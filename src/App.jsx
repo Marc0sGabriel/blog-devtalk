@@ -37,7 +37,7 @@ const posts = [
       avatarUrl:
         'https://t.ctcdn.com.br/s2JXi8cJqXFQE7SAkzV2IBz8AKw=/400x400/smart/filters:format(webp)/i490761.jpeg',
       name: 'Steve Jobs',
-      role: 'CTO @ Apple',
+      role: 'CTO @Apple',
     },
     content: [
       {
