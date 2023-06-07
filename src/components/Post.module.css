@@ -121,7 +121,7 @@
   cursor: pointer;
 }
 
-.commentForm button[type='submit']:hover {
+.commentForm button[type='submit']:not(:disabled):hover {
   padding: 1rem 1.5rem;
   margin-top: 1rem;
   border-radius: 8px;
@@ -129,6 +129,11 @@
   background: var(--green-300);
   transition: all 0.3s;
   cursor: pointer;
+}
+
+.commentForm button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .commentList {
