@@ -15,6 +15,8 @@ export function Sidebar() {
 
         <strong>Marcos Gabriel</strong>
         <span>Software Engineer</span>
+
+        <p>💻✨ Adepto da experiência do usuário e defensor da usabilidade.</p>
       </div>
 
       <footer>
