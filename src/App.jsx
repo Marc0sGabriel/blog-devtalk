@@ -9,9 +9,9 @@ const posts = [
   {
     id: 1,
     author: {
-      avatarUrl: 'https://github.com/Marc0sGabriel.png',
-      name: 'Marcos Gabriel',
-      role: 'Software Engineer',
+      avatarUrl: `https://imageio.forbes.com/specials-images/imageserve/62d599ede3ff49f348f9b9b4/0x0.jpg?format=jpg&crop=821,821,x155,y340,safe&height=416&width=416&fit=bounds`,
+      name: 'Bill Gates',
+      role: 'Co-founder @Microsoft',
     },
     content: [
       {
@@ -22,6 +22,7 @@ const posts = [
       podem gerar certa complexidade e muitas vezes até erros que atrasam o
       processo, atrapalhando assim o fluxo de desenvolvimento.`,
       },
+      { type: 'paragraph', content: 'segue o link abaixo:' },
       { type: 'link', content: 'www.exemplo.com/projeto' },
       { type: 'hashtag', content: '#react' },
       { type: 'hashtag', content: '#projeto' },
@@ -37,7 +38,7 @@ const posts = [
       avatarUrl:
         'https://t.ctcdn.com.br/s2JXi8cJqXFQE7SAkzV2IBz8AKw=/400x400/smart/filters:format(webp)/i490761.jpeg',
       name: 'Steve Jobs',
-      role: 'CTO @Apple',
+      role: 'CEO @Apple',
     },
     content: [
       {
