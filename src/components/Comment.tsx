@@ -34,11 +34,6 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
     }
   );
 
-  const publishedCommentToNow = formatDistanceToNow(publishedCommentDate, {
-    locale: ptBR,
-    addSuffix: true,
-  });
-
   return (
     <div className={styles.comment}>
       <Avatar
@@ -56,7 +51,7 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
                 title={publishedCommentFormat}
                 dateTime={publishedCommentDate.toISOString()}
               >
-                {publishedCommentToNow}
+                Há poucos segundos
               </time>
             </div>
 
