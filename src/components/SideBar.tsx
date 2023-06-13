@@ -19,7 +19,19 @@ export function Sidebar() {
         <strong>Marcos Gabriel</strong>
         <span>Software Engineer</span>
 
-        <p>💻✨ Adepto da experiência do usuário e defensor da usabilidade.</p>
+        <p>✨ Adepto da experiência do usuário e defensor da usabilidade.</p>
+      </div>
+
+      <div className={styles.containerStatsFollowers}>
+        <div>
+          <span>1,243</span>
+          <p>Seguidores</p>
+        </div>
+        <div className={styles.separatorStatsFollowers}></div>
+        <div>
+          <span>527</span>
+          <p>Seguindo</p>
+        </div>
       </div>
 
       <footer>

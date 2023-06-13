@@ -4,9 +4,15 @@
   padding: 0 1rem;
 
   display: grid;
-  grid-template-columns: 256px 1fr;
-  gap: 2rem;
+  grid-template-columns: 356px 1fr;
   align-items: flex-start;
+  gap: 2rem;
+}
+
+.wrapperSidebar {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 @media (max-width: 768px) {

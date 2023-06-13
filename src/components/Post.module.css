@@ -2,6 +2,8 @@
   background: var(--gray-800);
   border-radius: 8px;
   padding: 2.5rem;
+
+  margin-top: 7rem;
 }
 
 .post + .post {
@@ -98,6 +100,9 @@
   color: var(--gray-100);
   margin-top: 1rem;
   border-radius: 8px;
+}
+.commentForm textarea::placeholder {
+  color: var(--blue-900);
 }
 
 .commentForm > footer {

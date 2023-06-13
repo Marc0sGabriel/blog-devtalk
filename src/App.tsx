@@ -5,6 +5,7 @@ import { Sidebar } from './components/SideBar';
 
 import './global.css';
 import styles from './App.module.css';
+import { NewPost } from './components/NewPost';
 
 const posts = [
   {
@@ -66,10 +67,10 @@ export function App() {
   return (
     <>
       <Header />
-
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
+          <NewPost />
           {posts.map((posts) => {
             return (
               <Post

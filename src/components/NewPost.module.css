@@ -1,0 +1,42 @@
+.createNewPostContainer {
+  position: sticky;
+  top: 2rem;
+  background-color: var(--gray-800);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  outline: 1px solid var(--gray-600);
+
+  padding: 0 2.5rem;
+  margin-bottom: 1rem;
+  z-index: 50;
+}
+
+.createNewPostContainer header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.createNewPostContainer header form {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.createNewPostContainer header textarea {
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  background: var(--gray-600);
+  padding: 0.875rem;
+  height: 3rem;
+  border: 0;
+  line-height: 1.4;
+  color: var(--gray-100);
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.createNewPostContainer header textarea::placeholder {
+  font-weight: 500;
+  color: var(--blue-900);
+}
