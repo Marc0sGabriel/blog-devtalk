@@ -1,6 +1,7 @@
 .createNewPostContainer {
-  position: sticky;
-  top: 2rem;
+  position: relative;
+  top: 0.5rem;
+
   background-color: var(--gray-800);
   backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -26,7 +27,7 @@
   width: 100%;
   resize: none;
   overflow: hidden;
-  background: var(--gray-600);
+  background: var(--gray-700);
   padding: 0.875rem;
   height: 3rem;
   border: 0;

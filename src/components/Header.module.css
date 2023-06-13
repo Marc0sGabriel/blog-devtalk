@@ -1,4 +1,9 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  backdrop-filter: blur(10px);
+  margin-bottom: 3rem;
   background: var(--gray-800);
   display: flex;
   justify-content: center;

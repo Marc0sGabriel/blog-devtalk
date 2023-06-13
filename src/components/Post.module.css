@@ -58,6 +58,15 @@
   color: var(--gray-400);
 }
 
+.authorCheck {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.authorCheck svg {
+  color: var(--green-300);
+}
+
 .author {
   display: flex;
   align-items: center;

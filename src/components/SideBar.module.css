@@ -1,6 +1,6 @@
 .sidebar {
   position: sticky;
-  top: 2rem;
+  top: 9rem;
   background: var(--gray-800);
   border-radius: 8px;
   overflow: hidden;

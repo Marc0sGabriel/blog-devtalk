@@ -7,6 +7,7 @@ import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import { useState } from 'react';
 import styles from './Post.module.css';
+import { CheckCircle } from 'phosphor-react';
 
 interface Author {
   name: string;
@@ -73,7 +74,10 @@ export function Post({ author, content, publishedAt }: PostProps) {
             <Avatar src={author.avatarUrl} alt={'foto de perfil'} />
 
             <div className={styles.authorInfo}>
-              <strong>{author.name}</strong>
+              <div className={styles.authorCheck}>
+                <strong>{author.name}</strong>
+                <CheckCircle size={20} />
+              </div>
               <span>{author.role}</span>
             </div>
           </div>
