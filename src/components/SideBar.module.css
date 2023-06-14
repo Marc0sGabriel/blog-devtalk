@@ -106,3 +106,33 @@
   color: var(--white);
   transition: all 0.3s;
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+  }
+
+  .sidebar footer a {
+    font-size: 1.1rem;
+  }
+
+  .containerStatsFollowers p {
+    font-size: 1.1rem;
+  }
+
+  .containerStatsFollowers span {
+    font-size: 1.5rem;
+  }
+
+  .profile strong {
+    font-size: 1.25rem;
+  }
+
+  .profile span {
+    font-size: 1rem;
+  }
+
+  .profile p {
+    font-size: 1.1rem;
+  }
+}
