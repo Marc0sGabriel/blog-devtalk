@@ -18,18 +18,18 @@ const posts = [
     content: [
       {
         type: 'paragraph',
-        content: `Este projeto visa a criação de um template que possa ser utilizado no
-      momento de criação de projetos utilizando React Native, visto que o
-      processo de instalação e configuração das libs no início de um projeto
-      podem gerar certa complexidade e muitas vezes até erros que atrasam o
-      processo, atrapalhando assim o fluxo de desenvolvimento.`,
+        content: `Este projeto incrível, 
+        concebido por uma equipe brilhante de engenheiros e desenvolvedores, utiliza 
+        toda a potência e flexibilidade do
+        framework .NET para criar uma solução verdadeiramente 
+        inovadora. Com a habilidade de aproveitar a versatilidade do C#, uma linguagem de programação de renome mundial, combinada com a solidez do ambiente de execução do .NET, conseguimos criar uma aplicação que ultrapassa os limites do que era considerado possível.`,
       },
       { type: 'paragraph', content: 'segue o link abaixo:' },
       { type: 'link', content: 'www.exemplo.com/projeto' },
-      { type: 'hashtag', content: '#react' },
-      { type: 'hashtag', content: '#projeto' },
+      { type: 'hashtag', content: '#CSharp' },
+      { type: 'hashtag', content: '#dotNet' },
       { type: 'hashtag', content: '#programação' },
-      { type: 'hashtag', content: '#typescript' },
+      { type: 'hashtag', content: '#microsoft' },
     ],
     publishedAt: new Date('2023-06-01 10:30:50'),
   },

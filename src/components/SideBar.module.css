@@ -110,6 +110,7 @@
 @media (max-width: 768px) {
   .sidebar {
     position: static;
+    width: 380px;
   }
 
   .sidebar footer a {
