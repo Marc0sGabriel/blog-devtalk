@@ -84,8 +84,8 @@
 
 .sidebar footer a {
   background: transparent;
-  color: var(--purple-700);
-  outline: 2px solid var(--purple-700);
+  color: var(--purple-500);
+  outline: 2px solid var(--purple-500);
   border-radius: 8px;
   height: 50px;
   padding: 0 1rem;
