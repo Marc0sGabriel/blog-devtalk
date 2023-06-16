@@ -9,7 +9,7 @@
   padding: 1rem 1rem;
   outline: 1px solid var(--gray-600);
 
-  margin-bottom: 1rem;
+  margin-bottom: 8rem;
 
   display: flex;
   align-items: center;
@@ -88,4 +88,127 @@
 
 .newPostForm {
   width: 100%;
+}
+
+.post {
+  background: var(--gray-800);
+  border-radius: 8px;
+  padding: 2.5rem;
+
+  margin-top: 2rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorInfo strong {
+  display: block;
+  color: var(--gray-100);
+  line-height: 1.6;
+}
+
+.authorInfo span {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--gray-400);
+}
+
+.content {
+  line-height: 1.6;
+  color: var(--gray-300);
+  margin-top: 1.5rem;
+}
+
+.content p {
+  margin-top: 1rem;
+}
+
+.content span + span {
+  font-weight: bold;
+  color: var(--green-500);
+  text-decoration: none;
+  margin-left: 0.75rem;
+}
+
+.post > article header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post > article header time {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+.commentForm {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-600);
+}
+
+.commentForm > strong {
+  line-height: 1.6;
+  color: var(--gray-100);
+}
+
+.commentForm textarea {
+  width: 100%;
+  resize: none;
+  background: var(--gray-900);
+  padding: 1rem;
+  height: 6rem;
+  border: 0;
+  line-height: 1.4;
+  color: var(--gray-100);
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+.commentForm textarea::placeholder {
+  color: var(--blue-900);
+}
+
+.commentForm > footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: none;
+}
+
+.commentForm button[type='submit'] {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 0;
+  color: var(--gray-100);
+  font-weight: bold;
+  background: var(--green-500);
+  cursor: pointer;
+}
+
+.commentForm button[type='submit']:not(:disabled):hover {
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--green-300);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.commentForm button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.commentList {
+  margin-top: 2rem;
 }

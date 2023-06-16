@@ -6,25 +6,9 @@ import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import { useState } from 'react';
-import styles from './Post.module.css';
 import { CheckCircle } from 'phosphor-react';
-
-interface Author {
-  name: string;
-  role: string;
-  avatarUrl: string;
-}
-
-interface Content {
-  type: 'paragraph' | 'link' | 'hashtag';
-  content: string;
-}
-
-interface PostProps {
-  author: Author;
-  content: Content[];
-  publishedAt: Date;
-}
+import { PostProps } from '../types/post';
+import styles from './Post.module.css';
 
 export function Post({ author, content, publishedAt }: PostProps) {
   const [comments, setComment] = useState<string[]>([]);
