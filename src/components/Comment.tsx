@@ -24,7 +24,7 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
     onDeleteComment(content);
   }
 
-  const publishedCommentDate = new Date('2023-06-06 19:04:00');
+  const publishedCommentDate = new Date();
 
   const publishedCommentFormat = format(
     publishedCommentDate,
@@ -33,6 +33,11 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
       locale: ptBR,
     }
   );
+
+  const publishedCommentToNow = formatDistanceToNow(publishedCommentDate, {
+    locale: ptBR,
+    addSuffix: true,
+  });
 
   return (
     <div className={styles.comment}>
@@ -51,7 +56,7 @@ export function Comment({ content, onDeleteComment }: CommentProps) {
                 title={publishedCommentFormat}
                 dateTime={publishedCommentDate.toISOString()}
               >
-                Há poucos segundos
+                {publishedCommentToNow}
               </time>
             </div>
 
