@@ -34,7 +34,7 @@ Acesse 👉️
 - [x]  Preview em tempo real
 - [x]  Adicionado Likes (Aplausos)
 - [ ]  Consumir dados de um backend
-- [ ]  Criação de Post
+- [x]  Criação de Post
 - [ ]  Seção de editar perfil 
 - [ ]  Seção de vagas de emprego
 
