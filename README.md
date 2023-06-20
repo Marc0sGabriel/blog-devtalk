@@ -1,4 +1,6 @@
-![devtalk](https://blog-devtalk.vercel.app/images/logo.svg)
+<div align="center">
+ <img align="center" src="https://blog-devtalk.vercel.app/images/logo.svg">
+</div>
 
 
 # Projeto
