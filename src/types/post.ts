@@ -5,7 +5,7 @@ interface Author {
 }
 
 interface Content {
-  type?: 'paragraph' | 'link' | 'hashtag';
+  type?: 'paragraph' | 'link' | 'hashtag' | {};
   content: string;
 }
 
