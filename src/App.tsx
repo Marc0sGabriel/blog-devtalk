@@ -1,11 +1,13 @@
 import React from 'react';
 import { Post } from './components/Post';
-import { Header } from './components/Header';
+import { Header } from './components/Header/Header';
 import { Sidebar } from './components/SideBar';
-
+import { ThemeProvider } from 'styled-components';
 import './global.css';
 import styles from './App.module.css';
 import { NewPost } from './components/NewPost';
+import { defaultTheme } from './styles/themes/default';
+import { GlobalStyle } from './styles/global';
 
 const posts = [
   {
@@ -65,7 +67,7 @@ const posts = [
 
 export function App() {
   return (
-    <>
+    <ThemeProvider theme={defaultTheme}>
       <Header />
       <div className={styles.wrapper}>
         <Sidebar />
@@ -83,6 +85,7 @@ export function App() {
           })}
         </main>
       </div>
-    </>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
