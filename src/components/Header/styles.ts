@@ -18,11 +18,6 @@ export const HeaderContainer = styled.header`
   & strong {
     font-size: 1.25rem;
   }
-
-  .logoContainer {
-    display: flex;
-    align-items: center;
-  }
 `;
 
 export const LogoContainer = styled.div`
