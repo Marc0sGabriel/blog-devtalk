@@ -5,6 +5,7 @@ export const defaultTheme = {
   'gray-200': '#d2d5d9',
   'gray-300': '#c4c4cc;',
   'gray-500': '#7b7b8b',
+  'gray-600': '#64707d',
   'gray-900': '#08090a',
 
   'green-100': '#e9fbfa',
@@ -19,8 +20,8 @@ export const defaultTheme = {
   'blue-100': '#ebedfc',
   'blue-600': '#3b49df',
 
-  ' purple-500': ' rgb(149, 51, 206)',
-  ' purple-700': ' rgb(140, 43, 197)',
+  'purple-500': ' rgb(149, 51, 206)',
+  'purple-700': ' rgb(140, 43, 197)',
 
   'yellow-100': '#fffaed',
   'yellow-600': '#f5b400',
