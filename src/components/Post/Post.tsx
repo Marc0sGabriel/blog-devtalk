@@ -65,7 +65,7 @@ export function Post({ author, content, publishedAt }: PostProps) {
             <div>
               <div>
                 <strong>{author.name}</strong>
-                <CheckCircle size={20} />
+                <CheckCircle size={20} weight="fill" />
               </div>
               <span>{author.role}</span>
             </div>

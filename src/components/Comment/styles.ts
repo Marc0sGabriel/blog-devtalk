@@ -17,7 +17,7 @@ export const CommentContainer = styled.div`
 `;
 
 export const CommentContentContainer = styled.div`
-  background: ${(props) => props.theme['gray-300']};
+  background: ${(props) => props.theme['gray-100']};
   border-radius: 8px;
   padding: 1rem;
   max-width: 30rem;

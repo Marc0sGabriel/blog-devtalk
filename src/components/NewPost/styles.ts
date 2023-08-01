@@ -5,11 +5,10 @@ export const NewPostContainer = styled.div`
   top: 0.5rem;
   z-index: 50;
 
-  background-color: ${(props) => props.theme['gray-200']};
+  background-color: ${(props) => props.theme['white']};
   backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 1rem 1rem;
-  outline: 1px solid ${(props) => props.theme['gray-300']};
 
   margin-bottom: 8rem;
 
@@ -31,7 +30,7 @@ export const NewPostContainer = styled.div`
       resize: none;
       overflow: hidden;
       overflow: -moz-hidden-unscrollable;
-      background: ${(props) => props.theme['gray-300']};
+      background: ${(props) => props.theme['gray-100']};
       padding: 0.875rem;
       height: 3rem;
       border: 0;

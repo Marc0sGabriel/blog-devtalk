@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export const PostContainer = styled.article`
-  background: ${(props) => props.theme['gray-200']};
+  background: ${(props) => props.theme['white']};
   border-radius: 8px;
   padding: 2.5rem;
   margin-top: 2rem;
@@ -81,7 +81,7 @@ export const CommentFormContainer = styled.form`
   textarea {
     width: 100%;
     resize: none;
-    background: ${(props) => props.theme['gray-300']};
+    background: ${(props) => props.theme['gray-200']};
     padding: 1rem;
     height: 6rem;
     border: 0;

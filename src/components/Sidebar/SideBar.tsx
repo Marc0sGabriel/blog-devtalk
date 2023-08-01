@@ -34,17 +34,17 @@ export function Sidebar() {
         <h2>Discover</h2>
         <h4>help • discuss</h4>
         <a href="#">
-          <p>What do you find difficult about SQL and Databases?</p>
+          <p>Qual sua dificuldade em bancos de dados?</p>
           <span>20 comments</span>
         </a>
 
         <a href="#">
-          <p>How's your 2023 going?</p>
+          <p>Como está sendo o seu ano?</p>
           <span>45 comments</span>
         </a>
 
         <a href="#">
-          <p>What's your personal development plan?</p>
+          <p>Qual framework javascript recomendam?</p>
           <span>12 comments</span>
         </a>
       </NewTopicsContainer>

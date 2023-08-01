@@ -16,7 +16,7 @@ export const SidebarProfileContainer = styled.div`
   height: 30rem;
   border-radius: 8px;
   overflow: hidden;
-
+  border: 1px solid ${(props) => props.theme['gray-300']};
   & > img {
     width: 100%;
     height: 100px;

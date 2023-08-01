@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export const PostContainer = styled.article`
-  background: ${(props) => props.theme['gray-200']};
+  background: ${(props) => props.theme['white']};
   border-radius: 8px;
   padding: 2.5rem;
 
