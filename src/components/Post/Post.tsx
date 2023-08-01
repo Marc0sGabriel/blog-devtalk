@@ -4,7 +4,7 @@ import { format, formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 
 import { Avatar } from '../Avatar';
-import { Comment } from '../Comment';
+import { Comment } from '../Comment/Comment';
 import { useState } from 'react';
 import { CheckCircle } from 'phosphor-react';
 import { PostProps } from '../../types/post';
