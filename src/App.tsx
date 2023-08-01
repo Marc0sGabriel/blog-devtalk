@@ -4,7 +4,7 @@ import { Header } from './components/Header/Header';
 import { Sidebar } from './components/Sidebar/SideBar';
 import { ThemeProvider } from 'styled-components';
 import styles from './App.module.css';
-import { NewPost } from './components/NewPost';
+import { NewPost } from './components/NewPost/NewPost';
 import { defaultTheme } from './styles/themes/default';
 import { GlobalStyle } from './styles/global';
 
