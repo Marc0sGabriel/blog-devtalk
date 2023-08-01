@@ -12,11 +12,26 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding: 1.25rem 0;
+    padding: 1.25rem 2rem;
+    box-shadow: 0px 6px 15px rgba(12, 12, 12, 0.06);
   }
 
-  & strong {
-    font-size: 1.25rem;
+  div {
+    strong {
+      font-size: 1.25rem;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 9999px;
+    }
   }
 `;
 
