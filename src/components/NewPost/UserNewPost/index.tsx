@@ -1,12 +1,11 @@
 import React, { ChangeEvent, FormEvent, InvalidEvent } from 'react';
+import { useState } from 'react';
 
 import { format, formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 
 import { Avatar } from '../../Avatar';
 import { Comment } from '../../Comment/Comment';
-import { useState } from 'react';
-import styles from './PostLayout.module.css';
 import { ContentContainer, PostContainer } from './styles';
 import { CommentFormContainer } from '../../Post/styles';
 
@@ -66,9 +65,9 @@ export function PostLayout({ content }: IPostProps) {
 
   return (
     <>
-      <PostContainer className={styles.post}>
+      <PostContainer>
         <header>
-          <div className={styles.author}>
+          <div>
             <Avatar
               src={'https://github.com/Marc0sGabriel.png'}
               alt={'foto de perfil'}
@@ -88,14 +87,9 @@ export function PostLayout({ content }: IPostProps) {
           </time>
         </header>
 
-        <ContentContainer className={styles.content}>
-          {content}
-        </ContentContainer>
+        <ContentContainer>{content}</ContentContainer>
 
-        <CommentFormContainer
-          onSubmit={handleCreateNewComment}
-          className={styles.commentForm}
-        >
+        <CommentFormContainer onSubmit={handleCreateNewComment}>
           <strong>Deixe seu feedback</strong>
 
           <textarea
@@ -114,7 +108,7 @@ export function PostLayout({ content }: IPostProps) {
           </footer>
         </CommentFormContainer>
 
-        <div className={styles.commentList}>
+        <div>
           {comments.map((comment) => {
             return (
               <Comment
