@@ -45,6 +45,11 @@ export const GlobalStyle = createGlobalStyle`
   -webkit-text-size-adjust: 100%;
 }
 
+a {
+  color: ${(props) => props.theme['gray-600']};
+  text-decoration: none;
+}
+
 body {
   background-color: ${(props) => props.theme['gray-100']};
   color: ${(props) => props.theme['gray-900']};
