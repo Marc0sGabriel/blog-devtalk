@@ -1,9 +1,8 @@
 import React from 'react';
-import { Post } from './components/Post';
+import { Post } from './components/Post/Post';
 import { Header } from './components/Header/Header';
-import { Sidebar } from './components/SideBar';
+import { Sidebar } from './components/Sidebar/SideBar';
 import { ThemeProvider } from 'styled-components';
-import './global.css';
 import styles from './App.module.css';
 import { NewPost } from './components/NewPost';
 import { defaultTheme } from './styles/themes/default';
