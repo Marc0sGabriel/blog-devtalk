@@ -61,7 +61,7 @@ export const CommentContentContainer = styled.div`
   }
 
   p {
-    color: ${(props) => props.theme['gray-600']};
+    color: ${(props) => props.theme['gray-900']};
     margin-top: 1rem;
   }
 `;
