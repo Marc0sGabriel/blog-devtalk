@@ -5,11 +5,11 @@ import blogLogo from '/images/logo.svg';
 export function Header() {
   return (
     <HeaderContainer>
+      <strong> </strong>
       <LogoContainer>
         <img src={blogLogo} alt="logo do blog" />
         <strong>DevTalk</strong>
       </LogoContainer>
-
       <nav>
         <Bell size={25} />
 
