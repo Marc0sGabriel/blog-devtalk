@@ -67,25 +67,18 @@ const posts = [
 
 export function Home() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Header />
-      <Wrapper>
-        <Sidebar />
-        <main>
-          <NewPost />
-          {posts.map((posts) => {
-            return (
-              <Post
-                key={posts.id}
-                author={posts.author}
-                content={posts.content}
-                publishedAt={posts.publishedAt}
-              />
-            );
-          })}
-        </main>
-      </Wrapper>
-      <GlobalStyle />
-    </ThemeProvider>
+    <main>
+      <NewPost />
+      {posts.map((posts) => {
+        return (
+          <Post
+            key={posts.id}
+            author={posts.author}
+            content={posts.content}
+            publishedAt={posts.publishedAt}
+          />
+        );
+      })}
+    </main>
   );
 }
