@@ -1,3 +1,4 @@
+import { HouseSimple } from 'phosphor-react';
 import { styled } from 'styled-components';
 
 export const SidebarContainer = styled.aside`
@@ -15,13 +16,23 @@ export const SidebarContainer = styled.aside`
     flex-direction: column;
     gap: 1rem;
 
+    .active {
+      color: ${(props) => props.theme['gray-900']};
+    }
+
     a {
       display: flex;
       align-items: center;
       gap: 0.875rem;
       text-decoration: none;
+      font-weight: 600;
       width: fit-content;
-      color: ${(props) => props.theme['gray-900']};
+      color: ${(props) => props.theme['gray-600']};
+      transition: all 0.3s;
+    }
+
+    a:hover {
+      color: black;
     }
   }
 
