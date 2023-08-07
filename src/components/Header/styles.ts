@@ -13,13 +13,11 @@ export const HeaderContainer = styled.header`
     align-items: center;
     gap: 1rem;
     padding: 1.25rem 2rem;
-    box-shadow: 0px 6px 15px rgba(12, 12, 12, 0.06);
+    box-shadow: 0px 6px 15px rgba(12, 12, 12, 0.03);
   }
 
-  div {
-    strong {
-      font-size: 1.25rem;
-    }
+  strong {
+    font-size: 1.5rem;
   }
 
   nav {
@@ -38,4 +36,5 @@ export const HeaderContainer = styled.header`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+  gap: 1rem;
 `;
