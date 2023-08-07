@@ -16,10 +16,6 @@ export const SidebarContainer = styled.aside`
     flex-direction: column;
     gap: 1rem;
 
-    .active {
-      color: ${(props) => props.theme['gray-900']};
-    }
-
     a {
       display: flex;
       align-items: center;
@@ -29,6 +25,10 @@ export const SidebarContainer = styled.aside`
       width: fit-content;
       color: ${(props) => props.theme['gray-600']};
       transition: all 0.3s;
+
+      &.active {
+        color: ${(props) => props.theme['gray-900']};
+      }
     }
 
     a:hover {
