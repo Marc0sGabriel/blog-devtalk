@@ -57,7 +57,7 @@ export const ContentContainer = styled.div`
 
     a + a {
       font-weight: bold;
-      color: var(--green-500);
+      color: ${(props) => props.theme['green-400']};
       text-decoration: none;
       margin-left: 0.75rem;
     }
@@ -65,13 +65,13 @@ export const ContentContainer = styled.div`
 
   a {
     font-weight: bold;
-    color: var(--green-500);
+    color: ${(props) => props.theme['green-400']};
     text-decoration: none;
   }
 
   a:hover {
     font-weight: bold;
-    color: var(--green-300);
+    filter: brightness(0.8);
     text-decoration: none;
     transition: all 0.3s;
   }

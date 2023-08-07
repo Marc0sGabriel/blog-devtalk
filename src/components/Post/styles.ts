@@ -38,13 +38,13 @@ export const PostContainer = styled.article`
 
     a {
       font-weight: bold;
-      color: var(--green-500);
+      color: ${(props) => props.theme['green-400']};
       text-decoration: none;
     }
 
     a:hover {
       font-weight: bold;
-      color: var(--green-300);
+      filter: brightness(0.8);
       text-decoration: none;
       transition: all 0.3s;
     }
@@ -81,7 +81,7 @@ export const CommentFormContainer = styled.form`
   textarea {
     width: 100%;
     resize: none;
-    background: ${(props) => props.theme['gray-200']};
+    background: ${(props) => props.theme['gray-100']};
     padding: 1rem;
     height: 6rem;
     border: 0;
@@ -101,9 +101,9 @@ export const CommentFormContainer = styled.form`
     margin-top: 1rem;
     border-radius: 8px;
     border: 0;
-    color: var(--gray-100);
+    color: ${(props) => props.theme['white']};
     font-weight: bold;
-    background: var(--green-500);
+    background: ${(props) => props.theme['green-400']};
     cursor: pointer;
   }
 
@@ -112,7 +112,7 @@ export const CommentFormContainer = styled.form`
     margin-top: 1rem;
     border-radius: 8px;
     border: 0;
-    background: var(--green-300);
+    filter: brightness(0.9);
     transition: all 0.3s;
     cursor: pointer;
   }
@@ -123,7 +123,7 @@ export const CommentFormContainer = styled.form`
   }
 
   textarea::placeholder {
-    color: var(--blue-900);
+    color: ${(props) => props.theme['gray-600']};
   }
 
   footer {

@@ -64,12 +64,12 @@ export const NewPostContainer = styled.div`
 
       button {
         margin-top: 1rem;
-        background: var(--green-500);
+        background: ${(props) => props.theme['green-400']};
         border: none;
         border-radius: 9999px;
         height: 3rem;
         width: 3rem;
-        color: var(--gray-100);
+        color: ${(props) => props.theme['gray-100']};
 
         font-weight: bold;
 
@@ -77,7 +77,7 @@ export const NewPostContainer = styled.div`
       }
 
       button[type='submit']:not(:disabled):hover {
-        background: var(--green-300);
+        background: ${(props) => props.theme['green-300']};
         transition: 0.3s all;
       }
 
