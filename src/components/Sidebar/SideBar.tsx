@@ -13,25 +13,22 @@ export function Sidebar() {
   return (
     <SidebarContainer>
       <nav>
-        <NavLink
-          to="/"
-          className={(isActive) => (isActive ? 'active' : 'inactive')}
-        >
+        <NavLink to="/">
           <HouseSimple size={25} />
           <span>Inicio</span>
         </NavLink>
 
-        <NavLink to="#">
+        <NavLink to="/saved">
           <BookmarkSimple size={25} />
           <span>Salvos</span>
         </NavLink>
 
-        <NavLink to="#">
+        <NavLink to="/explore">
           <Globe size={25} />
           <span>Explorar</span>
         </NavLink>
 
-        <NavLink to="#">
+        <NavLink to="/search">
           <MagnifyingGlass size={25} />
           <span>Pesquisar</span>
         </NavLink>
