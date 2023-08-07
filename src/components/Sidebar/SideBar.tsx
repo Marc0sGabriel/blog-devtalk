@@ -7,46 +7,53 @@ import {
 
 import { NewTopicsContainer, SidebarContainer } from './styles';
 import { ProfileUserCard } from './components/ProfileUserCard';
+import { NavLink } from 'react-router-dom';
 
 export function Sidebar() {
   return (
     <SidebarContainer>
       <nav>
-        <a href="#">
+        <NavLink
+          to="/"
+          className={(isActive) => (isActive ? 'active' : 'inactive')}
+        >
           <HouseSimple size={25} />
-          <span>Home</span>
-        </a>
-        <a href="#">
+          <span>Inicio</span>
+        </NavLink>
+
+        <NavLink to="#">
           <BookmarkSimple size={25} />
-          <span>Saved</span>
-        </a>
-        <a href="#">
+          <span>Salvos</span>
+        </NavLink>
+
+        <NavLink to="#">
           <Globe size={25} />
-          <span>Discover</span>
-        </a>
-        <a href="#">
+          <span>Explorar</span>
+        </NavLink>
+
+        <NavLink to="#">
           <MagnifyingGlass size={25} />
-          <span>Search</span>
-        </a>
+          <span>Pesquisar</span>
+        </NavLink>
       </nav>
 
       <NewTopicsContainer>
-        <h2>Discover</h2>
-        <h4>help • discuss</h4>
-        <a href="#">
+        <h2>Explore</h2>
+        <h4>Contribua • Discute</h4>
+        <NavLink to="#">
           <p>Qual sua dificuldade em bancos de dados?</p>
           <span>20 comments</span>
-        </a>
+        </NavLink>
 
-        <a href="#">
+        <NavLink to="#">
           <p>Como está sendo o seu ano?</p>
           <span>45 comments</span>
-        </a>
+        </NavLink>
 
-        <a href="#">
+        <NavLink to="#">
           <p>Qual framework javascript recomendam?</p>
           <span>12 comments</span>
-        </a>
+        </NavLink>
       </NewTopicsContainer>
 
       <ProfileUserCard />
