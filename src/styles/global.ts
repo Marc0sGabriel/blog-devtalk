@@ -3,13 +3,13 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 
 ::selection {
-  background-color: var(--green-300);
+  background-color: ${(props) => props.theme['purple-500']};
   color: white;
 }
 
 :focus {
   outline: transparent;
-  box-shadow: 0 0 0 2px var(--green-300);
+  box-shadow: 0 0 0 2px ${(props) => props.theme['green-400']};
 }
 
 * {
