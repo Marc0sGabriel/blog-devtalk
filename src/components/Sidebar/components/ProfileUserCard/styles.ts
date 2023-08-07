@@ -11,12 +11,11 @@ export const SidebarProfileContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  background: ${(props) => props.theme['gray-200']};
+  background: ${(props) => props.theme['white']};
   width: 356px;
-  height: 30rem;
+  height: 27rem;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid ${(props) => props.theme['gray-300']};
   & > img {
     width: 100%;
     height: 100px;
@@ -50,8 +49,7 @@ export const SidebarProfileContainer = styled.div`
   }
 
   footer {
-    border-top: 1px solid ${(props) => props.theme['gray-300']};
-    width: 88%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -80,20 +78,18 @@ export const SidebarProfileContainer = styled.div`
     }
     a:hover {
       background: ${(props) => props.theme['purple-500']};
-      color: var(--white);
+      color: ${(props) => props.theme['white']};
       transition: all 0.3s;
     }
   }
 `;
 
 export const SidebarProfileStatsFollowers = styled.div`
-  border-top: 1px solid ${(props) => props.theme['gray-300']};
-
   display: flex;
   padding: 1rem 0;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   margin-top: 1rem;
 
   span {
