@@ -31,7 +31,7 @@ export const CommentContentContainer = styled.div`
     button {
       cursor: pointer;
       background: transparent;
-      color: var(--gray-400);
+      color: ${(props) => props.theme['gray-500']};
       border: 0;
       line-height: 0;
       border-radius: 2px;
@@ -40,7 +40,7 @@ export const CommentContentContainer = styled.div`
     }
 
     button:hover {
-      color: var(--red-500);
+      color: ${(props) => props.theme['red-400']};
     }
 
     div {
@@ -55,7 +55,7 @@ export const CommentContentContainer = styled.div`
         font-size: 0.78rem;
         font-weight: 500;
         line-height: 1.6;
-        color: var(--gray-400);
+        color: ${(props) => props.theme['gray-500']};
       }
     }
   }
