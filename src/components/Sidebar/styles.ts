@@ -1,4 +1,3 @@
-import { HouseSimple } from 'phosphor-react';
 import { styled } from 'styled-components';
 
 export const SidebarContainer = styled.aside`
