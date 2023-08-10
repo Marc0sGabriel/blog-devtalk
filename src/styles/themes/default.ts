@@ -1,9 +1,10 @@
 export const defaultTheme = {
+  name: 'default-theme',
   white: '#fff',
 
   'gray-100': '#eef0f1',
-  'gray-200': '#e8e8e8',
-  'gray-300': '#c4c4cc;',
+  'gray-200': '#e6e6e6',
+  'gray-300': '#dddddd;',
   'gray-500': '#7b7b8b',
   'gray-600': '#64707d',
   'gray-900': '#08090a',
@@ -25,4 +26,34 @@ export const defaultTheme = {
 
   'yellow-100': '#fffaed',
   'yellow-600': '#f5b400',
+};
+
+export const light = {
+  name: 'light-theme',
+  colors: {
+    header: '#fff',
+    background: '#eef0f1',
+    text: '#08090a',
+    subtitle: '#64707d',
+    border: '#dddddd',
+    foreground: '#fff',
+    boxes: '#eef0f1',
+    inactiveLinks: '#64707d',
+    primaryButton: '#19b2a6',
+    editButtonProfile: 'rgb(149, 51, 206)',
+  },
+};
+
+export const dark = {
+  name: 'dark-theme',
+  colors: {
+    header: '#313131',
+    background: '#121212',
+    text: '#d1d1d1',
+    subtitle: '#64707d',
+    border: '#dddddd',
+    foreground: '#313131',
+    boxes: '#3a3a3a',
+    inactiveLinks: '#64707d',
+  },
 };
