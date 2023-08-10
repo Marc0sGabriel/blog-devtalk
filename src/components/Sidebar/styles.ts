@@ -1,12 +1,16 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 export const SidebarContainer = styled.aside`
-  background: ${(props) => props.theme['gray-100']};
-  border-radius: 8px;
+  background: ${(props) => props.theme["gray-100"]};
   overflow: hidden;
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+
+  height: 90rem;
+  gap: 2rem;
+  border-right: solid 1px #e5e5e5;
 
   height: 100%;
 
@@ -22,11 +26,11 @@ export const SidebarContainer = styled.aside`
       text-decoration: none;
       font-weight: 600;
       width: fit-content;
-      color: ${(props) => props.theme['gray-600']};
+      color: ${(props) => props.theme["gray-600"]};
       transition: all 0.3s;
 
       &.active {
-        color: ${(props) => props.theme['gray-900']};
+        color: ${(props) => props.theme["gray-900"]};
       }
     }
 
@@ -62,6 +66,24 @@ export const SidebarContainer = styled.aside`
     p {
       font-size: 1.1rem;
     }
+
+    nav {
+      position: fixed;
+      width: 100vw;
+      padding: 1rem;
+      z-index: 50;
+      bottom: 0;
+      left: 0;
+      justify-content: center;
+      gap: 2rem;
+      flex-direction: row;
+      border-top: 1px solid ${(props) => props.theme["gray-200"]};
+      background: ${(props) => props.theme["gray-300"]};
+      span {
+        visibility: hidden;
+        display: none;
+      }
+    }
   }
 `;
 
@@ -79,7 +101,12 @@ export const NewTopicsContainer = styled.div`
 
     &:hover {
       transition: all 0.5s;
-      color: ${(props) => props.theme['gray-900']};
+      color: ${(props) => props.theme["gray-900"]};
     }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+    visibility: hidden;
   }
 `;
