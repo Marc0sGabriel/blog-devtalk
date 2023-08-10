@@ -3,11 +3,10 @@ import {
   Globe,
   HouseSimple,
   MagnifyingGlass,
-} from 'phosphor-react';
+} from "phosphor-react";
 
-import { NewTopicsContainer, SidebarContainer } from './styles';
-import { ProfileUserCard } from './components/ProfileUserCard';
-import { NavLink } from 'react-router-dom';
+import { NewTopicsContainer, SidebarContainer } from "./styles";
+import { NavLink } from "react-router-dom";
 
 export function Sidebar() {
   return (
@@ -18,9 +17,9 @@ export function Sidebar() {
           <span>Inicio</span>
         </NavLink>
 
-        <NavLink to="/saved">
-          <BookmarkSimple size={25} />
-          <span>Salvos</span>
+        <NavLink to="/search">
+          <MagnifyingGlass size={25} />
+          <span>Pesquisar</span>
         </NavLink>
 
         <NavLink to="/explore">
@@ -28,9 +27,9 @@ export function Sidebar() {
           <span>Explorar</span>
         </NavLink>
 
-        <NavLink to="/search">
-          <MagnifyingGlass size={25} />
-          <span>Pesquisar</span>
+        <NavLink to="/saved">
+          <BookmarkSimple size={25} />
+          <span>Salvos</span>
         </NavLink>
       </nav>
 
@@ -52,8 +51,6 @@ export function Sidebar() {
           <span>12 comments</span>
         </NavLink>
       </NewTopicsContainer>
-
-      <ProfileUserCard />
     </SidebarContainer>
   );
 }
