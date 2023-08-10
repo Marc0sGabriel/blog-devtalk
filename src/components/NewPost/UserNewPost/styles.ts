@@ -1,12 +1,12 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 export const PostContainer = styled.article`
-  background: ${(props) => props.theme['white']};
+  background: ${(props) => props.theme["white"]};
   border-radius: 8px;
   padding: 2.5rem;
 
   margin-top: 2rem;
-  max-width: 730.75px;
+  max-width: inherit;
   overflow-wrap: break-word;
 
   & + & {
@@ -20,7 +20,8 @@ export const PostContainer = styled.article`
 
     time {
       font-size: 0.875rem;
-      color: ${(props) => props.theme['gray-600']};
+      display: block;
+      color: ${(props) => props.theme["gray-600"]};
     }
 
     div {
@@ -32,7 +33,7 @@ export const PostContainer = styled.article`
         display: block;
         strong {
           display: block;
-          color: ${(props) => props.theme['gray-900']};
+          color: ${(props) => props.theme["gray-900"]};
           line-height: 1.6;
         }
 
@@ -40,7 +41,7 @@ export const PostContainer = styled.article`
           display: block;
           font-size: 0.875rem;
           line-height: 1.6;
-          color: ${(props) => props.theme['gray-900']};
+          color: ${(props) => props.theme["gray-900"]};
         }
       }
     }
@@ -49,7 +50,7 @@ export const PostContainer = styled.article`
 
 export const ContentContainer = styled.div`
   line-height: 1.6;
-  color: ${(props) => props.theme['gray-900']};
+  color: ${(props) => props.theme["gray-900"]};
   margin-top: 1.5rem;
 
   p {
@@ -57,7 +58,7 @@ export const ContentContainer = styled.div`
 
     a + a {
       font-weight: bold;
-      color: ${(props) => props.theme['green-400']};
+      color: ${(props) => props.theme["green-400"]};
       text-decoration: none;
       margin-left: 0.75rem;
     }
@@ -65,7 +66,7 @@ export const ContentContainer = styled.div`
 
   a {
     font-weight: bold;
-    color: ${(props) => props.theme['green-400']};
+    color: ${(props) => props.theme["green-400"]};
     text-decoration: none;
   }
 
@@ -78,7 +79,7 @@ export const ContentContainer = styled.div`
 
   span + span {
     font-weight: bold;
-    color: ${(props) => props.theme['green-400']};
+    color: ${(props) => props.theme["green-400"]};
     text-decoration: none;
     margin-left: 0.75rem;
   }
