@@ -1,4 +1,4 @@
-import styles from './Avatar.module.css';
+import { AvatarContainer } from './styles';
 
 interface AvatarProps {
   hasBorder?: boolean;
@@ -7,11 +7,5 @@ interface AvatarProps {
 }
 
 export function Avatar({ hasBorder = true, src, alt }: AvatarProps) {
-  return (
-    <img
-      className={hasBorder ? styles.avatarWithBorder : styles.avatar}
-      src={src}
-      alt={alt}
-    />
-  );
+  return <AvatarContainer src={src} alt={alt} $inputColor={hasBorder} />;
 }
