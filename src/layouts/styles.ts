@@ -1,7 +1,7 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 2rem auto;
   padding: 0 1rem;
 
