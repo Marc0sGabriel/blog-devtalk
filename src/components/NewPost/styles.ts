@@ -1,8 +1,6 @@
 import {
-  DialogClose,
   DialogContent,
   DialogOverlay,
-  DialogPortal,
   DialogTitle,
 } from "@radix-ui/react-dialog";
 import { styled } from "styled-components";
