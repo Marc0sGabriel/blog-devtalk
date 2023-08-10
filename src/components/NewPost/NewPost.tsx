@@ -1,19 +1,19 @@
-import { PaperPlane } from 'phosphor-react';
-import { Avatar } from '../Avatar';
-
-import { ChangeEvent, FormEvent, InvalidEvent, useState } from 'react';
-import { PostLayout } from './UserNewPost';
-import { NewPostContainer } from './styles';
+import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
+import { Avatar } from "../Avatar";
+import { PostLayout } from "./UserNewPost";
+import { ModalContent, ModalOverlay, NewPostContainer, Title } from "./styles";
+import * as Dialog from "@radix-ui/react-dialog";
+import { X } from "phosphor-react";
 
 export function NewPost() {
   const [post, setPost] = useState<string[]>([]);
-  const [newPostText, setNewPostText] = useState('');
+  const [newPostText, setNewPostText] = useState("");
 
   function handleCreateNewPost(event: FormEvent) {
     event.preventDefault();
     setPost([...post, newPostText]);
 
-    setNewPostText('');
+    setNewPostText("");
   }
 
   function handleNewPostChange(event: ChangeEvent<HTMLTextAreaElement>) {
@@ -21,8 +21,9 @@ export function NewPost() {
   }
 
   function handleNewPostInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
-    event.target.setCustomValidity('Preencha esse campo');
+    event.target.setCustomValidity("Preencha esse campo");
   }
+
   const isEmpty = newPostText.length === 0;
 
   return (
@@ -30,24 +31,57 @@ export function NewPost() {
       <NewPostContainer>
         <Avatar
           src="https://github.com/Marc0sGabriel.png"
-          alt={'foto de perfil'}
+          alt={"foto de perfil"}
         />
-        <form onSubmit={handleCreateNewPost}>
-          <header>
-            <textarea
-              required
-              name="post"
-              onChange={handleNewPostChange}
-              onInvalid={handleNewPostInvalid}
-              value={newPostText}
-              placeholder="Quais as novidades?"
-            />
 
-            <button type="submit" disabled={isEmpty}>
-              <PaperPlane size={23} weight="bold" />
-            </button>
-          </header>
-        </form>
+        <Dialog.Root>
+          <form onSubmit={handleCreateNewPost}>
+            <header>
+              <Dialog.Trigger asChild>
+                <textarea required placeholder="Quais as novidades?" />
+              </Dialog.Trigger>
+
+              <Dialog.Portal>
+                <ModalOverlay />
+                <ModalContent>
+                  <div className="headerModal">
+                    <Title>Nova Postagem</Title>
+                    <Dialog.Close asChild>
+                      <X size={23} weight="bold" className="xIcon" />
+                    </Dialog.Close>
+                  </div>
+                  <div>
+                    <div className="Editor">
+                      <textarea
+                        required
+                        onChange={handleNewPostChange}
+                        value={newPostText}
+                        onInvalid={handleNewPostInvalid}
+                      />
+                    </div>
+                    <Dialog.Close asChild={true}>
+                      <button
+                        type="submit"
+                        className="PublishButton"
+                        onClick={handleCreateNewPost}
+                        aria-label="Close"
+                        disabled={isEmpty}
+                      >
+                        Publicar
+                      </button>
+                    </Dialog.Close>
+
+                    <Dialog.Close asChild>
+                      <button className="Cancel" aria-label="Close">
+                        Cancelar
+                      </button>
+                    </Dialog.Close>
+                  </div>
+                </ModalContent>
+              </Dialog.Portal>
+            </header>
+          </form>
+        </Dialog.Root>
       </NewPostContainer>
 
       <div>
