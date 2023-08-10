@@ -16,6 +16,12 @@ export const SidebarProfileContainer = styled.div`
   height: 27rem;
   border-radius: 8px;
   overflow: hidden;
+
+  @media (max-width: 500px) {
+    display: none;
+    visibility: hidden;
+  }
+
   & > img {
     width: 100%;
     height: 100px;
