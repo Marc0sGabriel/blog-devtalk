@@ -60,7 +60,11 @@ export function Post({ author, content, publishedAt }: PostProps) {
       <PostContainer>
         <header>
           <AuthorPostContainer>
-            <Avatar src={author.avatarUrl} alt={'foto de perfil'} />
+            <Avatar
+              hasBorder={true}
+              src={author.avatarUrl}
+              alt={'foto de perfil'}
+            />
 
             <div>
               <div>
