@@ -5,6 +5,7 @@ export const HeaderContainer = styled.header`
     position: sticky;
     top: 0;
     z-index: 60;
+    width: 100%;
     backdrop-filter: blur(10px);
     margin-bottom: 3rem;
     background: ${(props) => props.theme['white']};
