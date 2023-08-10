@@ -1,12 +1,14 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
   max-width: 70rem;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 
-  display: grid;
-  grid-template-columns: 356px 1fr;
+  display: flex;
+
+  /* display: grid;
+  grid-template-columns: 356px 1fr; */
   align-items: flex-start;
   gap: 2rem;
 
