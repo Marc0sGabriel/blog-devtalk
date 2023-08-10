@@ -1,13 +1,13 @@
-import React, { ChangeEvent, FormEvent, InvalidEvent } from 'react';
-import { useState } from 'react';
+import React, { ChangeEvent, FormEvent, InvalidEvent } from "react";
+import { useState } from "react";
 
-import { format, formatDistanceToNow } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR';
+import { format, formatDistanceToNow } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR";
 
-import { Avatar } from '../../Avatar';
-import { Comment } from '../../Comment/Comment';
-import { ContentContainer, PostContainer } from './styles';
-import { CommentFormContainer } from '../../Post/styles';
+import { Avatar } from "../../Avatar";
+import { Comment } from "../../Comment/Comment";
+import { ContentContainer, PostContainer } from "./styles";
+import { CommentFormContainer } from "../../Post/styles";
 
 interface Author {
   name: string;
@@ -16,30 +16,30 @@ interface Author {
 }
 
 export interface IPostProps {
-  author: Author;
-  content: string[];
-  publishedAt: Date;
+  author?: Author;
+  content: string;
+  publishedAt?: Date;
 }
 
 export function PostLayout({ content }: IPostProps) {
   const [comments, setComment] = useState<string[]>([]);
 
-  const [newCommentText, setNewCommentText] = useState('');
+  const [newCommentText, setNewCommentText] = useState("");
 
   function handleCreateNewComment(event: FormEvent) {
     event.preventDefault();
     setComment([...comments, newCommentText]);
 
-    setNewCommentText('');
+    setNewCommentText("");
   }
 
   function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
-    event.target.setCustomValidity('');
+    event.target.setCustomValidity("");
     setNewCommentText(event.target.value);
   }
 
   function handleNewCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
-    event.target.setCustomValidity('Esse campo é obrigatório');
+    event.target.setCustomValidity("Esse campo é obrigatório");
   }
 
   function deleteComment(commentToDelete: string) {
@@ -69,8 +69,8 @@ export function PostLayout({ content }: IPostProps) {
         <header>
           <div>
             <Avatar
-              src={'https://github.com/Marc0sGabriel.png'}
-              alt={'foto de perfil'}
+              src={"https://github.com/Marc0sGabriel.png"}
+              alt={"foto de perfil"}
             />
 
             <div>
